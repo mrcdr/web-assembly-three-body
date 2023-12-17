@@ -41,7 +41,7 @@ jobs:
         run: |
           mkdir public
           cd public
-          em++ ../three_body.cpp -std=c++17 -Iinclude -I/usr/include/eigen3 -o index.html -O3 -sMAX_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH
+          em++ ../three_body.cpp -std=c++17 -I../include -I/usr/include/eigen3 -o index.html -O3 -sMAX_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH
           cd ..
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
